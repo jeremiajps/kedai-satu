@@ -1,14 +1,14 @@
 <?php    
     session_start();
 
-    include '../config/koneksi_database.php';    
+    include './config/koneksi_database.php';    
 
     if (!isset($_SESSION['nomor_meja'])) {
         header("Location: nomormeja.php");
         exit;
     }
 
-    require_once '../components/headermenu.php';
+    require_once './components/headermenu.php';
 
     $nomor_meja = $_SESSION['nomor_meja'];
 
@@ -71,5 +71,5 @@
     </div>
 </div>
 <?php
-    require_once '../components/footermenu.php';
+    require_once './components/footermenu.php';
 ?>

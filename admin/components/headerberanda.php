@@ -90,14 +90,14 @@
             }
             .container-input{
                 width: 100%;
-                padding: 50px;
+                padding: 50px 5px;
                 box-sizing: border-box;
                 justify-content: center;
                 align-items: center;
             }
             .body-input{
                 background-color: #fff;
-                width: 300px;
+                width: 50%;
                 padding: 10px 15px;
                 box-sizing: border-box;
                 border-radius: 5px;
@@ -227,8 +227,8 @@
             <div class="sidebar-body">
                 <h4>Kategori Menu</h4>
                 <ul>
-                    <li><a href="../auth/logout.php">Logout</a></li>
-                    <li><a href="../pages/beranda.php">Beranda</a></li>
+                    <li><a href="./pages/beranda.php">Beranda</a></li>
+                    <li><a href="./auth/logout.php">Logout</a></li>
                 </ul>
             </div>
         </div>

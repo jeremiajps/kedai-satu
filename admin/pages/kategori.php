@@ -5,9 +5,9 @@
         exit();
     }
 
-    require_once '../components/headerberanda.php';
+    require_once './components/headerberanda.php';
 
-    include '../config/koneksi_database.php';
+    include './config/koneksi_database.php';
 
     if(isset($_GET['delete'])){
         //proses hapus foto
@@ -15,8 +15,8 @@
         $result_delete_foto=pg_query($dbconn, $qry_delete_foto);
         $d=pg_fetch_object($result_delete_foto);
 
-        if(file_exists('../assets/images/' . $d->gambar_menu)){
-            unlink('../assets/images/' .$d->gambar_menu);
+        if(file_exists('./assets/images/' . $d->gambar_menu)){
+            unlink('./assets/images/' .$d->gambar_menu);
         }
         
         //proses hapus data
@@ -62,7 +62,7 @@
                                     <a href="menuupdate.php?id=<?= $row['id_daftar'] ?>" class="buttonicon" title="Edit Menu"><i class="fa fa-edit"></i></a>
                                     <a href="?delete=<?= $row['nama_menu'] ?>" class="buttonicon" name="delete" onclick="return confirm('Anda Yakin?')" title="Hapus Menu"><i class="fa fa-times"></i></a>
                                 </td>
-                                <td><img src="../images/<?=$row['gambar_menu']?>" width="200"></td>
+                                <td><img src="./images/<?=$row['gambar_menu']?>" width="200"></td>
                                 <td><?=$row['nama_menu']?></td>
                                 <td><?=$row['harga_menu']?></td>
                                 <td><?=$row['deskripsi']?></td>
@@ -83,5 +83,5 @@
             </div>
         </div>
 <?php
-    require_once '../components/footerberanda.php';
+    require_once './components/footerberanda.php';
 ?>

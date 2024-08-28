@@ -1,5 +1,5 @@
 <?php
-    include '../config/koneksi_database.php';
+    include './config/koneksi_database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_order = $_POST['id_order'];

@@ -54,11 +54,11 @@
         <!--BERANDA-->
         <div class="container">
             <div class="body">
-                <img src="/kedaisatu/admin/assets/misc/logo.png">
+                <img src="/admin/assets/misc/logo.png">
                 </br>
                 <div class="judul">KEDAI MAKAN</div>
                 <div class="judul">SATU-SATU</div></br>
-                <button type="button" onclick="location.href='/kedaisatu/admin/auth/login.php'" name="login">MASUK</button>
+                <button type="button" onclick="location.href='/admin/auth/login.php'" name="login">MASUK</button>
             </div>
         </div>
     </body>

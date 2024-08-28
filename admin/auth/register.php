@@ -2,11 +2,11 @@
     session_start();
 
     if ($_SESSION['role'] != 'superadmin') {
-        header('location: ../auth/login.php');
+        header('location: ./auth/login.php');
         exit();
     }
 
-    include '../config/koneksi_database.php';
+    include './config/koneksi_database.php';
 
     $error = "";
 
@@ -20,7 +20,7 @@
             $result = pg_query_params($dbconn, $qry, [$username, $password, $role]);
             
             if ($result) {
-                header('location: ../pages/beranda.php');
+                header('location: ./pages/beranda.php');
                 echo "<script>alert('Berhasil Membuat Data Admin Baru')</script>";
             } else {
                 $error = "<script>alert('Gagal Membuat Data Admin Baru')</script>";
@@ -77,11 +77,12 @@
             display: block;
             width: 100%;
             padding: 0.5rem 1rem;
-            color: #c0dcac;
+            color: #fff;
             background-color: #206A5D;
             border-style: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
         }
         .error-message {
             color: red;
@@ -103,6 +104,7 @@
                     <option value="orderadmin">Admin Dapur</option>
                 </select>
                 <button type="submit" name="register" class="button">Register</button>
+                <button type="submit"  onclick="location.href='/admin/pages/beranda.php'" name="kembali" class="button">Kembali</button>
             </form>
             <?php if (!empty($error)): ?>
                 <div class="error-message"><?= $error ?></div>

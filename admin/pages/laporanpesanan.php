@@ -1,13 +1,13 @@
 <?php
     session_start();
     if ($_SESSION['role'] != 'superadmin' && $_SESSION['role'] != 'orderadmin') {
-        header('location: ../auth/login.php');
+        header('location: ./auth/login.php');
         exit();
     }
 
-    require_once '../components/headerberanda.php';
+    require_once './components/headerberanda.php';
 
-    include '../config/koneksi_database.php';
+    include './config/koneksi_database.php';
 
     $query_order = "SELECT p.id_pesanan, p.nomor_meja, p.waktu_order, p.id_order, lp.status_pesanan, 
                     STRING_AGG(dm.nama_menu || ' (' || dp.jumlah_item || ')', ', ') AS daftar_menu, 
@@ -53,5 +53,5 @@
 </div>
 
 <?php
-    require_once '../components/footerberanda.php';
+    require_once './components/footerberanda.php';
 ?>

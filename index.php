@@ -56,12 +56,12 @@
     <body>
         <div class="container">
             <div class="body">
-                <img src="/kedaisatu/misc/logo.png">
+                <img src="/images/logo.png">
                 </br>
                 <div class="judul">KEDAI MAKAN</div>
                 <div class="judul">SATU-SATU</div>
             </br>
-                <button type="button" onclick="location.href='/kedaisatu/page/pages/nomormeja.php'" class="btnPesan" name="pesan">PESAN</button>
+                <button type="button" onclick="location.href='/page/pages/nomormeja.php'" class="btnPesan" name="pesan">PESAN</button>
             </div>
         </div>
     </body>

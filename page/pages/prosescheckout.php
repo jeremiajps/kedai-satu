@@ -1,5 +1,5 @@
 <?php
-    include '../config/koneksi_database.php';  
+    include './config/koneksi_database.php';  
     session_start();
 
     if(isset($_POST['checkout'])){

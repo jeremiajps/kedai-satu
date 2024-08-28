@@ -1,9 +1,9 @@
 <?php
     session_start();
     
-    include '../config/koneksi_database.php';    
+    include './config/koneksi_database.php';    
 
-    require_once '../components/headermenu.php';
+    require_once './components/headermenu.php';
     
     if (!isset($_SESSION['nomor_meja'])) {
         header('Location: nomormeja.php');
@@ -55,5 +55,5 @@
             </div>
         </div>
 <?php
-    require_once '../components/footermenu.php';
+    require_once './components/footermenu.php';
 ?>

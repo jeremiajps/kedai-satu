@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include '../config/koneksi_database.php';
+    include './config/koneksi_database.php';
 ?>
 
 <!DOCTYPE html>
@@ -79,11 +79,11 @@
                             $_SESSION['username'] = $row['username'];
                             $_SESSION['role'] = $row['role'];
                             if ($row['role'] == 'superadmin') {
-                                header('location: ../pages/beranda.php');
+                                header('location: ./pages/beranda.php');
                             } elseif ($row['role'] == 'menuadmin') {
-                                header('location: ../pages/daftarmenu.php');
+                                header('location: ./pages/daftarmenu.php');
                             } elseif ($row['role'] == 'orderadmin') {
-                                header('location: ../pages/laporanpesanan.php');
+                                header('location: ./pages/laporanpesanan.php');
                             }
                             } else {
                                 echo 'Username atau Password Salah';
