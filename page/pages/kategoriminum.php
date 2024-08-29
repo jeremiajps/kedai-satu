@@ -1,9 +1,9 @@
 <?php
     session_start();
     
-    include './config/koneksi_database.php';    
+    include '../config/koneksi_database.php';    
 
-    require_once './components/headermenu.php';
+    require_once '../components/headermenu.php';
     
     if (!isset($_SESSION['nomor_meja'])) {
         header('Location: nomormeja.php');
@@ -29,7 +29,7 @@
                                 ?>
                                 <form action="tambahkeranjang.php" method="post">
                                 <div class="list-menu">
-                                    <img src="/kedaisatu/admin/assets/images/<?=$row['gambar_menu']?>" input type="hidden" name="gambarmenu">
+                                    <img src="../admin/assets/images/<?=$row['gambar_menu']?>" input type="hidden" name="gambarmenu">
                                     <div class="list-body">
                                         <div class="name-makan"><?= $row['nama_menu']?></div>
                                         <div class="deskripsi-makan"><?= $row['deskripsi'] ?></div>
@@ -55,5 +55,5 @@
             </div>
         </div>
 <?php
-    require_once './components/footermenu.php';
+    require_once '../components/footermenu.php';
 ?>
