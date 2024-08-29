@@ -227,8 +227,8 @@
             <div class="sidebar-body">
                 <h4>Kategori Menu</h4>
                 <ul>
-                    <li><a href="./pages/beranda.php">Beranda</a></li>
-                    <li><a href="./auth/logout.php">Logout</a></li>
+                    <li><a href="../pages/beranda.php">Beranda</a></li>
+                    <li><a href="../auth/logout.php">Logout</a></li>
                 </ul>
             </div>
         </div>
