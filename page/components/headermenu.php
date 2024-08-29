@@ -1,5 +1,5 @@
 <?php
-    include './config/koneksi_database.php';   
+    include '../config/koneksi_database.php';   
 ?>
 <?php
     $qry="SELECT * from daftar_menu";
@@ -339,11 +339,11 @@
                     <?php
                     $row=pg_fetch_array($result);
                     ?>
-                    <li><a href="./pages/nomormeja.php">Beranda</a></li>
-                    <li><a href="./pages/daftarmenu.php">Semua Menu</a></li>
-                    <li><a href="./pages/kategorimakan.php?makan<?=$row['kategori_menu'];?>">Menu Makanan</a></li>
-                    <li><a href="./pages/kategoriminum.php?minum<?=$row['kategori_menu'];?>">Menu Minuman</a></li>
-                    <li><a href="./pages/keranjang.php">Keranjang Menu</a></li>
+                    <li><a href="../pages/nomormeja.php">Beranda</a></li>
+                    <li><a href="../pages/daftarmenu.php">Semua Menu</a></li>
+                    <li><a href="../pages/kategorimakan.php?makan<?=$row['kategori_menu'];?>">Menu Makanan</a></li>
+                    <li><a href="../pages/kategoriminum.php?minum<?=$row['kategori_menu'];?>">Menu Minuman</a></li>
+                    <li><a href="../pages/keranjang.php">Keranjang Menu</a></li>
                 </ul>
             </div>
         </div>
