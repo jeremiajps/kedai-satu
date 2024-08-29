@@ -7,7 +7,7 @@
         exit;
     }
 
-    require_once './components/headermenu.php';
+    require_once '../components/headermenu.php';
 ?>
 <div class="container-input">
     <div class="body-input">
@@ -20,5 +20,5 @@
 </div>
 
 <?php
-    require_once './components/footermenu.php';
+    require_once '../components/footermenu.php';
 ?>
