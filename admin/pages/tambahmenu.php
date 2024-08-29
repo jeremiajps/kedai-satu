@@ -1,13 +1,13 @@
 <?php
     session_start();
     if ($_SESSION['role'] != 'superadmin' && $_SESSION['role'] != 'menuadmin') {
-        header('location: ./auth/login.php');
+        header('location: ../auth/login.php');
         exit();
     }
 
-    include './config/koneksi_database.php';
+    include '../config/koneksi_database.php';
 
-    require_once './components/headerberanda.php';
+    require_once '../components/headerberanda.php';
 
     if(isset($_POST['submit'])){
         //proses upload gambar
@@ -70,5 +70,5 @@
 </div>
 
 <?php
-    require_once './components/footerberanda.php';
+    require_once '../components/footerberanda.php';
 ?>
