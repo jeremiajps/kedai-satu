@@ -2,7 +2,7 @@
     session_start();
 
     if ($_SESSION['role'] != 'superadmin') {
-        header('location: ./auth/login.php');
+        header('location: ../auth/login.php');
         exit();
     }
 ?>
@@ -62,13 +62,13 @@
         <!--BERANDA-->
         <div class="container">
             <div class="body">
-                <button type="button" onclick="location.href='/admin/pages/daftarmenu.php'" name="daftarmenu">DAFTAR MENU</button>
+                <button type="button" onclick="location.href='daftarmenu.php'" name="daftarmenu">DAFTAR MENU</button>
                 </br>
-                <button type="button" onclick="location.href='/admin/pages/laporanpesanan.php'" name="laporanpesanan">LAPORAN PESANAN</button>
+                <button type="button" onclick="location.href='laporanpesanan.php'" name="laporanpesanan">LAPORAN PESANAN</button>
                 </br>
-                <button type="button" onclick="location.href='/admin/auth/register.php'" name="laporanpesanan">REGISTER ADMIN BARU</button>
+                <button type="button" onclick="location.href='../auth/register.php'" name="laporanpesanan">REGISTER ADMIN BARU</button>
                 </br>
-                <button type="button" onclick="location.href='/admin/auth/logout.php'" name="logout">LOG OUT</button>
+                <button type="button" onclick="location.href='../auth/logout.php'" name="logout">LOG OUT</button>
                 </br>
             </div>
         </div>
