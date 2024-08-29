@@ -1,5 +1,5 @@
 <?php
-    include './config/koneksi_database.php';  
+    include '../config/koneksi_database.php';  
     session_start();
 
     if(isset($_POST['checkout'])){
@@ -48,7 +48,7 @@
             $qry_delete_keranjang = "DELETE FROM keranjang WHERE nomor_meja = $nomor_meja";
             pg_query($dbconn, $qry_delete_keranjang);
 
-            header("Location: konfirmasi_pesanan.php");
+            header("Location: konfirmasipesanan.php");
             exit();
         } else {
             echo "Error: Tidak Dapat Membuat Pesanan";
