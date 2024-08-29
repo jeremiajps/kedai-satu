@@ -5,9 +5,9 @@
         exit();
     }
 
-    require_once './components/headerberanda.php';
+    require_once '../components/headerberanda.php';
 
-    include './config/koneksi_database.php';
+    include '../config/koneksi_database.php';
 
     if(isset($_GET['delete'])){
         //proses hapus foto
@@ -15,8 +15,8 @@
         $result_delete_foto=pg_query($dbconn, $qry_delete_foto);
         $d=pg_fetch_object($result_delete_foto);
 
-        if(file_exists('./assets/images/' . $d->gambar_menu)){
-            unlink('./assets/images/' .$d->gambar_menu);
+        if(file_exists('../assets/images/' . $d->gambar_menu)){
+            unlink('../assets/images/' .$d->gambar_menu);
         }
         
         //proses hapus data
@@ -33,7 +33,7 @@
             <div class="content-table">
                 &nbsp<h4>Edit Menu Makanan</h4>&nbsp
                 <div class="card">
-                    <a href="tambahmakan.php" class="buttonTambah" title="Tambah Menu"><i class="fa fa-plus"></i></a>
+                    <a href="tambahmenu.php" class="buttonTambah" title="Tambah Menu"><i class="fa fa-plus"></i></a>
                     <table class="table">
                         <thead>
                             <tr>
@@ -83,5 +83,5 @@
             </div>
         </div>
 <?php
-    require_once './components/footerberanda.php';
+    require_once '../components/footerberanda.php';
 ?>
