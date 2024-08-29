@@ -1,14 +1,14 @@
 <?php
     session_start();
 
-    include './config/koneksi_database.php';  
+    include '../config/koneksi_database.php';  
 
     if (!isset($_SESSION['nomor_meja'])) {
         echo "Order ID is missing.";
         exit();
     }
 
-    require_once './components/headermenu.php';
+    require_once '../components/headermenu.php';
 
     $nomor_meja = $_SESSION['nomor_meja'];
 
@@ -75,6 +75,6 @@
         echo "No orders found.";
     }
     
-    require_once './components/footermenu.php';
+    require_once '../components/footermenu.php';
 ?>
 
