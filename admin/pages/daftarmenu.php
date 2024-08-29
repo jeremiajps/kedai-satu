@@ -1,13 +1,13 @@
 <?php
     session_start();
     if ($_SESSION['role'] != 'superadmin' && $_SESSION['role'] != 'menuadmin') {
-        header('location: ./auth/login.php');
+        header('location: ../auth/login.php');
         exit();
     }
 
-    require_once './components/headerberanda.php';
+    require_once '../components/headerberanda.php';
 
-    include './config/koneksi_database.php';
+    include '../config/koneksi_database.php';
 
     $qry="SELECT * from daftar_menu";
     $result=pg_query($dbconn,$qry);
@@ -18,8 +18,8 @@
         $result_delete_foto=pg_query($dbconn, $qry_delete_foto);
         $d=pg_fetch_object($result_delete_foto);
 
-        if(file_exists('./assets/images/' . $d->gambar_menu)){
-            unlink('./assets/images/' .$d->gambar_menu);
+        if(file_exists('../assets/images/' . $d->gambar_menu)){
+            unlink('../assets/images/' .$d->gambar_menu);
         }
         
         //proses hapus data
@@ -78,5 +78,5 @@
             </div>
         </div>
 <?php
-    require_once './components/footerberanda.php';
+    require_once '../components/footerberanda.php';
 ?>
