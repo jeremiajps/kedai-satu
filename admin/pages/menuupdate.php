@@ -1,13 +1,13 @@
 <?php
     session_start();
     if ($_SESSION['role'] != 'superadmin' && $_SESSION['role'] != 'menuadmin') {
-        header('location: ./auth/login.php');
+        header('location: ../auth/login.php');
         exit();
     }
 
-    require_once './components/headerberanda.php';
+    require_once '../components/headerberanda.php';
 
-    include './config/koneksi_database.php';
+    include '../config/koneksi_database.php';
     
     $qry="SELECT * from daftar_menu WHERE id_daftar='$_GET[id]' ";
     $result=pg_query($dbconn,$qry);
@@ -21,8 +21,8 @@
             move_uploaded_file($tmp_name, './assets/images/' . $name);
             
             //proses hapus data sebelumnya
-            if(file_exists('./assets/images/' . $_POST['gambar_lama'])){
-                unlink('./assets/images/' .$_POST['gambar_lama']);
+            if(file_exists('../assets/images/' . $_POST['gambar_lama'])){
+                unlink('../assets/images/' .$_POST['gambar_lama']);
             }
         }else{
             $name=$_POST['gambar_lama'];
@@ -56,7 +56,7 @@
                     <label>Gambar</label>
                     <input type="hidden" name="gambar_lama" value="<?= $i->gambar_menu ?>">
                     <div>
-                        <img src="./assets/images/<?= $i->gambar_menu ?>" width="200">
+                        <img src="../assets/images/<?= $i->gambar_menu ?>" width="200">
                     </div>
                     <input type="file" name="gambarmenu">
                 </div>
@@ -88,5 +88,5 @@
     </div>
 </div>
 <?php
-    require_once './components/footerberanda.php';
+    require_once '../components/footerberanda.php';
 ?>
