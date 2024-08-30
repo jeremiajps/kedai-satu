@@ -13,7 +13,7 @@
         //proses upload gambar
         $name=($_FILES['gambarmenu']['name']);
         $tmp_name=$_FILES['gambarmenu']['tmp_name'];
-        move_uploaded_file($tmp_name, './assets/images/' . $name);
+        move_uploaded_file($tmp_name, '../assets/images/' . $name);
 
         //proses insert data
         $gambar=$name;
