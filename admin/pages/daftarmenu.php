@@ -61,7 +61,7 @@
                                     <a href="menuupdate.php?id=<?= $row['id_daftar'] ?>" class="buttonicon" title="Edit Menu"><i class="fa fa-edit"></i></a>
                                     <a href="?delete=<?= $row['nama_menu'] ?>" class="buttonicon" name="delete" onclick="return confirm('Anda Yakin?')" title="Hapus Menu"><i class="fa fa-times"></i></a>
                                 </td>
-                                <td><img src="./assets/images/<?=$row['gambar_menu']?>" class="image"></td>
+                                <td><img src="../assets/images/<?=$row['gambar_menu']?>" class="image"></td>
                                 <td><?=$row['nama_menu']?></td>
                                 <td><?=$row['harga_menu']?></td>
                                 <td><?=$row['deskripsi']?></td>
