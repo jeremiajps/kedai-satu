@@ -27,7 +27,7 @@
                                 ?>
                                 <form action="tambahkeranjang.php" method="post">
                                 <div class="list-menu">
-                                    <img src="/app/admin/assets/images/<?=$row['gambar_menu']?>" input type="hidden" name="gambarmenu">
+                                    <img src="/admin/assets/images/<?=$row['gambar_menu']?>" input type="hidden" name="gambarmenu">
                                     <div class="list-body">
                                         <div class="name-makan"><?= $row['nama_menu']?></div>
                                         <div class="deskripsi-makan"><?= $row['deskripsi'] ?></div>
