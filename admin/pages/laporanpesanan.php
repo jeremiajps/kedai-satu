@@ -12,15 +12,12 @@
             $id_order = $_POST['id_order'];
             $status_pesanan = $_POST['status_pesanan'];
 
-            // Hapus detail pesanan terlebih dahulu
             $query_delete_detail = "DELETE FROM detail_pesanan WHERE id_pesanan IN (SELECT id_pesanan FROM pesanan WHERE id_order = $1)";
             pg_query_params($dbconn, $query_delete_detail, array($id_order));
 
-            // Hapus laporan pesanan
             $query_delete_laporan = "DELETE FROM laporan_pesanan WHERE id_pesanan IN (SELECT id_pesanan FROM pesanan WHERE id_order = $1)";
             pg_query_params($dbconn, $query_delete_laporan, array($id_order));
 
-            // Hapus pesanan
             $query_delete_pesanan = "DELETE FROM pesanan WHERE id_order = $1";
             pg_query_params($dbconn, $query_delete_pesanan, array($id_order));
 
