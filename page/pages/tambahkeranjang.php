@@ -24,7 +24,8 @@
         $result_check = pg_query($dbconn, $qry_check);
 
         if (pg_num_rows($result_check) > 0) {
-            $message[] = 'already added to cart!';
+            echo "<script>alert('Menu sudah ada di keranjang!!!'); window.location.href='keranjang.php';</script>";
+            exit();
         } else {
             $qry_insert = "INSERT INTO keranjang_menu (id_keranjang, id_daftar, jumlah_item) VALUES ($id_keranjang, $id_daftar, $jumlah_item)";
             $result_insert = pg_query($dbconn, $qry_insert);
