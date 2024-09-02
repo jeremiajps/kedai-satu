@@ -278,6 +278,12 @@
                 padding: 0.5rem;
                 font-size: small;
             }
+            .input-field{
+                width: 100%;
+                box-sizing: border-box;
+                padding: 2px;
+                font-size: small;
+            }
             .button{
                 display: inline-block;
                 background-color: #206A5D;
