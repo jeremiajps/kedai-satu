@@ -312,6 +312,17 @@
                 margin-right: 5px;
                 margin-bottom: 5px;
             }
+            .buttonKeranjang{
+                background-color: #206A5D;
+                color: #FFFFFF;
+                border-style: none;
+                border-radius: 3px;
+                padding: 2px 4px;
+                width: 100%;
+                margin-left: 2px;
+                margin-right: 2px;
+                cursor: pointer;
+            }
             .buttonCheckout{
                 background-color: #206A5D;
                 color: #FFFFFF;
@@ -320,8 +331,8 @@
                 font-family: 'Poppins', sans-serif;
                 border-style: none;
                 border-radius: 3px;
-                width: 35%;
-                height: 25px;
+                width: 40%;
+                padding: 5px 10px;
                 cursor: pointer;
                 margin-right: 5%;
             }
