@@ -35,7 +35,7 @@
                                         <div class="harga">Rp<?= number_format($row['harga_menu'], 0, ',', '.') ?></div>
                                         <input type="hidden" name="id_daftar" value="<?= $row['id_daftar'] ?>">
                                         <input type="number" name="jumlah" class="jumlah" min="1" max="99" value="1" required>
-                                        <button type="submit" class="buttonKeranjang" name="tambah_keranjang">Tambah ke Keranjang</button>
+                                        <button type="submit" class="buttonPesan" name="tambah_keranjang">Tambah ke Keranjang</button>
                                     </div>    
                                 </div>
                                 </form>
