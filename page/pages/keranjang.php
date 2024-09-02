@@ -71,8 +71,8 @@
                             <td>Rp<?= number_format($total_item_price, 0, ',', '.') ?></td>
                             <td>
                                 <input type="hidden" name="id_keranjang_menu" value="<?= $row['id_keranjang_menu'] ?>">
-                                <button type="submit" name="update" class="buttonAction">Update</button>
-                                <button type="submit" name="delete" class="buttonAction">Delete</button>
+                                <button type="submit" name="update" class="buttonKeranjang"><i class="fa fa-edit"></i></button>
+                                <button type="submit" name="delete" class="buttonKeranjang"><i class="fa fa-times"></i></button>
                             </td>
                             </form>
                         </tr>
