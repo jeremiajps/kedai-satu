@@ -66,7 +66,7 @@
                         <tr>
                             <form method="post">
                             <td><?= $row['nama_menu'] ?></td>
-                            <td><input type="number" name="jumlah_item" value="<?= $row['jumlah_item'] ?>" min="1"></td>
+                            <td><input type="number" name="jumlah_item" value="<?= $row['jumlah_item'] ?>" min="1" class="input-field"></td>
                             <td>Rp<?= number_format($row['harga_menu'], 0, ',', '.') ?></td>
                             <td>Rp<?= number_format($total_item_price, 0, ',', '.') ?></td>
                             <td>
