@@ -97,7 +97,7 @@
             }
             .body-input{
                 background-color: #fff;
-                width: 50%;
+                width: 80%;
                 padding: 10px 15px;
                 box-sizing: border-box;
                 border-radius: 5px;
