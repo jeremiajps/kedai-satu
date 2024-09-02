@@ -238,14 +238,14 @@
                 padding: 60px 10px;
             }
             .table{
-                font-size: 8px;
+                font-size: 10px;
                 color: #206A5D;
                 width: 100%;
                 border-collapse: collapse;
                 margin-top: 8px;
             }
             .table th, .table td {
-                padding: 10px;
+                padding: 5px;
                 border: 1px solid #206A5D;
                 text-align: left;
             }
@@ -317,10 +317,10 @@
                 color: #FFFFFF;
                 border-style: none;
                 border-radius: 3px;
-                padding: 2px 4px;
+                padding: 4px 4px;
                 width: 100%;
-                margin-left: 2px;
                 margin-right: 2px;
+                margin-bottom: 5px;
                 cursor: pointer;
             }
             .buttonCheckout{
