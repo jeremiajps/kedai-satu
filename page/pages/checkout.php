@@ -57,7 +57,7 @@
                         <div class="total-harga">
                             <strong>Total Harga: Rp<?= number_format($total_price, 0, ',', '.') ?></strong>
                         </div>
-                        <button type="submit" name="checkout" class="buttonCheckout">Proses Checkout</button>
+                        <button type="submit" name="checkout" class="buttonProses">Proses Checkout</button>
                     </form>
                 <?php 
                     } else { 
