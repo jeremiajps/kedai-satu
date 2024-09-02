@@ -319,6 +319,19 @@
                 cursor: pointer;
                 margin-right: 5%;
             }
+            .buttonProses{
+                background-color: #206A5D;
+                color: #FFFFFF;
+                font-weight: 600;
+                font-size: small;
+                font-family: 'Poppins', sans-serif;
+                border-style: none;
+                border-radius: 3px;
+                width: 50%;
+                padding: 5px 10px;
+                cursor: pointer;
+                margin-right: 5%;
+            }
             @media (max-width: 768px) {
                 .container{
                     width: 100%;
