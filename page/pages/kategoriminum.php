@@ -18,7 +18,7 @@
             <div class="body">
                 <div class="row">
                     <div class="col-6">  
-                        <div class="judul">Menu Makan dan Minum</div>
+                        <div class="judul">Menu Minuman</div>
                             <div class="sub-judul"> Kedai Makan Satu-Satu</div>
 
                                 <?php
