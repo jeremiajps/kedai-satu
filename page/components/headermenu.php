@@ -238,7 +238,7 @@
                 padding: 60px 10px;
             }
             .table{
-                font-size: smaller;
+                font-size: 8px;
                 color: #206A5D;
                 width: 100%;
                 border-collapse: collapse;
