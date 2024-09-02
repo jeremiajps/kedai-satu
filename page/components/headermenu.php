@@ -187,7 +187,7 @@
             .list-body{
                 flex: auto;
             }
-            .buttonKeranjang{
+            .buttonPesan{
                 display: block;
                 background-color: #206A5D;
                 color: #FFFFFF;
