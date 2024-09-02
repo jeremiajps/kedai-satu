@@ -332,7 +332,7 @@
                 border-style: none;
                 border-radius: 3px;
                 width: 40%;
-                padding: 5px 10px;
+                padding: 5px 8px;
                 cursor: pointer;
                 margin-right: 5%;
             }
