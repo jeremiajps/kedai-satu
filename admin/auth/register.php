@@ -8,8 +8,6 @@
 
     include '../config/koneksi_database.php';
 
-    $error = "";
-
     if (isset($_POST['register'])) {
         $username = htmlspecialchars($_POST['username']);
         $password = htmlspecialchars($_POST['password']);
@@ -20,13 +18,13 @@
             $result = pg_query_params($dbconn, $qry, [$username, $password, $role]);
             
             if ($result) {
-                header('location: ../pages/beranda.php');
-                echo "<script>alert('Berhasil Membuat Data Admin Baru')</script>";
+                echo "<script>alert('Berhasil Membuat Data Admin Baru'); window.location.href='../pages/beranda.php';</script>";
+                exit();
             } else {
-                $error = "<script>alert('Gagal Membuat Data Admin Baru')</script>";
+                echo "<script>alert('Gagal Membuat Data Admin Baru'); window.location.href='../pages/beranda.php';</script>";
             }
         } else {
-            $error = "<script>alert('Mohon Lengkapi Semua Data')</script>";
+            echo "<script>alert('Mohon Lengkapi Semua Data'); window.location.href='../pages/beranda.php';</script>";
         }
     }
 ?>
