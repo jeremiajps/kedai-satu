@@ -63,8 +63,8 @@
             <div class="body-login">
                 <div class="judul">Login</div>
                 <form action="" method="post">
-                    <input type="text" name="user" id="user" class="input-field" placeholder="Username">
-                    <input type="password" name="passlogin" id="passlogin" class="input-field" placeholder="Password">
+                    <input type="text" name="user" id="user" class="input-field" placeholder="Username" required>
+                    <input type="password" name="passlogin" id="passlogin" class="input-field" placeholder="Password" required>
                     <button type="submit" name="login" class="button">LOGIN</button>
                 </form>
                 <?php
