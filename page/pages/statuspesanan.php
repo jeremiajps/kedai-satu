@@ -1,0 +1,69 @@
+<?php
+    session_start();
+
+    include '../config/koneksi_database.php';  
+
+    if (!isset($_SESSION['nomor_meja'])) {
+        echo "Nomor meja tidak ditemukan.";
+        exit();
+    }
+
+    require_once '../components/headermenu.php';
+
+    $nomor_meja = $_SESSION['nomor_meja'];
+
+    $qry_get_order = "SELECT p.id_pesanan, p.nomor_meja, p.id_order, p.waktu_order, lp.status_pesanan, 
+                      STRING_AGG(dm.nama_menu || ' (' || dp.jumlah_item || ')', ', ') AS daftar_menu, 
+                      SUM(dp.total_harga_item) AS total_harga  
+                      FROM pesanan p
+                      JOIN laporan_pesanan lp ON p.id_pesanan = lp.id_pesanan
+                      JOIN detail_pesanan dp ON p.id_pesanan = dp.id_pesanan
+                      JOIN daftar_menu dm ON dp.id_daftar = dm.id_daftar
+                      WHERE p.nomor_meja = $1
+                      GROUP BY p.id_pesanan, p.nomor_meja, p.id_order, p.waktu_order, lp.status_pesanan
+                      ORDER BY p.waktu_order DESC LIMIT 1";
+    $result = pg_query_params($dbconn, $qry_get_order, array($nomor_meja));
+
+    if (pg_num_rows($result) > 0) {
+        $order = pg_fetch_assoc($result);
+?>
+<div class="container">
+    <div class="body">
+        <div class="row">
+            <div class="col-6">
+                <div class="judul">Status Pesanan Anda</div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nama Menu</th>
+                            <th>Nomor Pesanan</th>
+                            <th>Total Harga</th>
+                            <th>Waktu Pemesanan</th>
+                            <th>Status Pesanan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><?= $order['daftar_menu'] ?></td>
+                            <td><?= $order['id_order'] ?></td>
+                            <td>Rp<?= number_format($order['total_harga'], 0, ',', '.') ?></td>
+                            <td><?= $order['waktu_order'] ?></td>
+                            <td><?= $order['status_pesanan'] ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </br>
+                <div>
+                    <button onclick="window.location.reload()" class="buttonCheckout">Refresh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+    } else {
+        echo "Tidak ada pesanan";
+    }
+
+    require_once '../components/footermenu.php';
+?>
