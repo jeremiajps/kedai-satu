@@ -56,9 +56,10 @@
             <form action="statuspesanan.php" method="post">
             <input type="hidden" name="id_order" value="<?= $row['id_order']?>">
                 <select name='status_pesanan'>
-                    <option value="PENDING" <?= $row['status_pesanan'] == 'PENDING' ? 'selected' : '' ?> >Pending</option>
-                    <option value="DIKERJAKAN" <?= $row['status_pesanan'] == 'DIKERJAKAN' ? 'selected' : '' ?> >Dikerjakan</option>
-                    <option value="SIAP" <?= $row['status_pesanan'] == 'SIAP' ? 'selected' : '' ?> >Siap</option>
+                    <option value="Pesanan Sudah Dibayar" <?= $row['status_pesanan'] == 'Pesanan Sudah Dibayar' ? 'selected' : '' ?> >Pesanan sudah dibayar</option>
+                    <option value="Pesanan Masuk" <?= $row['status_pesanan'] == 'Pesanan Pending' ? 'selected' : '' ?> >Pesanan Masuk</option>
+                    <option value="Pesanan Dikerjakan" <?= $row['status_pesanan'] == 'Pesanan Dikerjakan' ? 'selected' : '' ?> >Pesanan Dikerjakan</option>
+                    <option value="Pesanan Siap" <?= $row['status_pesanan'] == 'Pesanan Siap' ? 'selected' : '' ?> >Pesanan Siap</option>
                 </select>
             <button type="submit" class="update">Update</button>
             </form>
