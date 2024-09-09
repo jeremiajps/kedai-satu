@@ -55,11 +55,22 @@
             </br>
                 <div>
                     <button onclick="window.location.reload()" class="buttonCheckout">Refresh</button>
+                    <button onclick="selesaikanPesanan()" class="buttonCheckout">Selesai</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+function selesaikanPesanan() {
+    if (confirm('Apakah Anda yakin ingin menyelesaikan pesanan? (Tekan "Cancel" jika tidak!!!)')) {
+        // Kirim request ke server untuk menandai pesanan selesai
+        window.location.href = 'pesananselesai.php';
+    }
+}
+</script>
+
 <?php
     } else {
         echo "Tidak ada pesanan";
