@@ -64,7 +64,7 @@
                     <strong>Total Harga: Rp<?= number_format($total_price, 0, ',', '.') ?></strong>
                 </div>
                 <div>
-                    <button type="submit" onclick="window.location.href='statuspesanan.php'" class="buttonCheckout"><script>alert('Silakan ke kasir untuk melakukan pembayaran!!!')</script>Lihat Status Pesanan</button>
+                    <button type="submit" onclick="window.location.href='statuspesanan.php'" class="buttonCheckout"><script>alert('Silakan ke kasir untuk melakukan pembayaran!!!')</script>Status Pesanan</button>
                 </div>
             </div>
         </div>
