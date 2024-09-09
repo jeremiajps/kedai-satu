@@ -4,7 +4,7 @@
     include '../config/koneksi_database.php';  
 
     if (!isset($_SESSION['nomor_meja'])) {
-        echo "Nomor meja tidak ditemukan.";
+        header("Location: /index.php");
         exit();
     }
 
