@@ -6,7 +6,7 @@
     require_once '../components/headermenu.php';
 
     if (!isset($_SESSION['nomor_meja'])) {
-        header('Location: nomormeja.php');
+        header('Location: /index.php');
         exit;
     }
     
