@@ -4,7 +4,7 @@
     include '../config/koneksi_database.php';  
 
     if (!isset($_SESSION['nomor_meja'])) {
-        echo "Order ID is missing.";
+        header("Location: /index.php");
         exit();
     }
 
