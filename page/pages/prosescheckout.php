@@ -4,7 +4,7 @@
 
     if(isset($_POST['checkout'])){
         if (!isset($_SESSION['nomor_meja'])) {
-            header("Location: keranjang.php");
+            header("Location: /index.php");
             exit();
         }
 
