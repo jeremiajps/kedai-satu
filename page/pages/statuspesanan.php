@@ -23,15 +23,16 @@
                       GROUP BY p.id_pesanan, p.nomor_meja, p.id_order, p.waktu_order, lp.status_pesanan
                       ORDER BY p.waktu_order DESC LIMIT 1";
     $result = pg_query_params($dbconn, $qry_get_order, array($nomor_meja));
-
-    if (pg_num_rows($result) > 0) {
-        $order = pg_fetch_assoc($result);
 ?>
 <div class="container">
     <div class="body">
         <div class="row">
             <div class="col-6">
                 <div class="judul">Status Pesanan Anda</div>
+                <?php
+                if (pg_num_rows($result) > 0) {
+                    $order = pg_fetch_assoc($result);
+                ?>
                 <table class="table">
                     <thead>
                         <tr>
@@ -57,6 +58,11 @@
                     <button onclick="window.location.reload()" class="buttonCheckout">Refresh</button>
                     <button onclick="selesaikanPesanan()" class="buttonCheckout">Selesai</button>
                 </div>
+                <?php
+                    } else {
+                        echo "Tidak ada pesanan";
+                    }
+                ?>
             </div>
         </div>
     </div>
@@ -72,9 +78,5 @@ function selesaikanPesanan() {
 </script>
 
 <?php
-    } else {
-        echo "Tidak ada pesanan";
-    }
-
     require_once '../components/footermenu.php';
 ?>
