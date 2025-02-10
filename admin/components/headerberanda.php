@@ -210,6 +210,52 @@
                 font-size: smaller;
                 cursor: pointer;
             }
+            .buttonMeja{
+                display: inline-block;
+                padding: 2px 6px;
+                color: #fff;
+                background-color: #206A5D;
+                border-style: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .container-update{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .body-update{
+                background-color: #fff;
+                width: 300px;
+                padding: 25px 15px;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+            .judul{
+                color: #206A5D;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            .input-field{
+                width: 100%;
+                display: block;
+                padding: 0.5rem 1rem;
+                box-sizing: border-box;
+                margin-bottom: 8px;
+            }
+            .buttonUpdate{
+                display: block;
+                width: 100%;
+                padding: 0.5rem 1rem;
+                color: #fff;
+                background-color: #206A5D;
+                border-style: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
             @media (max-width: 768px) {
                 .container{
                     width: 100%;
