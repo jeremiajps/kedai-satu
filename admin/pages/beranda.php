@@ -66,7 +66,9 @@
                 </br>
                 <button type="button" onclick="location.href='laporanpesanan.php'" name="laporanpesanan">LAPORAN PESANAN</button>
                 </br>
-                <button type="button" onclick="location.href='../auth/register.php'" name="laporanpesanan">REGISTER ADMIN BARU</button>
+                <button type="button" onclick="location.href='../auth/register.php'" name="register">REGISTER ADMIN BARU</button>
+                </br>
+                <button type="button" onclick="location.href='daftarmeja.php'" name="daftarmeja">DAFTAR MEJA</button>
                 </br>
                 <button type="button" onclick="location.href='../auth/logout.php'" name="logout">LOG OUT</button>
                 </br>
