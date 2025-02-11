@@ -33,6 +33,9 @@
         <input type="number" id="nomor_meja" name="nomor_meja" class="field-nomor" required>
         <button type="submit" class="nomormeja">Pesan Sekarang</button>
     </form>
+        <?php if (!empty($error)): ?>
+            <p style="color: red;"><?= $error ?></p>
+    <?php endif; ?>
     </div>
 </div>
 
